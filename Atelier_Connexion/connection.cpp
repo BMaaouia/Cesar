@@ -1,5 +1,5 @@
 #include "connection.h"
-
+//Ici c'est la gestion du connection
 Connection::Connection()
 {
 

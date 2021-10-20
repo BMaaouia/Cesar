@@ -25,11 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += console
 
 SOURCES += \
+    enseignant.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp
 
 HEADERS += \
+    enseignant.h \
         mainwindow.h \
     connection.h
 

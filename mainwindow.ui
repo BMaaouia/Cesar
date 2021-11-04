@@ -17,22 +17,22 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>40</x>
       <y>80</y>
-      <width>721</width>
+      <width>991</width>
       <height>431</height>
      </rect>
     </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="page_15">
-     <widget class="QTabWidget" name="tabWidget_7">
+    <widget class="QWidget" name="page_1">
+     <widget class="QTabWidget" name="tabWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>721</width>
+        <width>931</width>
         <height>411</height>
        </rect>
       </property>
@@ -75,13 +75,13 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="tab_17">
+      <widget class="QWidget" name="tab_1">
        <attribute name="title">
         <string>Ajouter Terrain</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_13">
+       <widget class="QGroupBox" name="groupBox_ajout">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -100,7 +100,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
         <property name="title">
          <string>Formulaire d'ajout</string>
         </property>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="lineEdit_id">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -121,7 +121,7 @@ padding:0 8;
 }</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="lineEdit_nom">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -142,7 +142,7 @@ padding:0 8;
 }</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_5">
+        <widget class="QLineEdit" name="lineEdit_capacite">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -163,7 +163,7 @@ padding:0 8;
 }</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="lineEdit_6">
+        <widget class="QLineEdit" name="lineEdit_emplacement">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -184,7 +184,7 @@ padding:0 8;
 }</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="label_id">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -200,7 +200,7 @@ padding:0 8;
           <string>ID</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="label_nom">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -216,7 +216,7 @@ padding:0 8;
           <string>Nom</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="label_type">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -232,7 +232,7 @@ padding:0 8;
           <string>Type</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="label_capacite">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -248,7 +248,7 @@ padding:0 8;
           <string>Capacité</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="label_emplacement">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -264,7 +264,7 @@ padding:0 8;
           <string>Emplacement</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_20">
+        <widget class="QLabel" name="label_etat">
          <property name="geometry">
           <rect>
            <x>40</x>
@@ -280,7 +280,7 @@ padding:0 8;
           <string>Etat</string>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox_9">
+        <widget class="QComboBox" name="comboBox_type">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -301,8 +301,38 @@ border-color: black;
 padding:0 8;
 }</string>
          </property>
+         <item>
+          <property name="text">
+           <string>Tennis</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Football</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Volleyball</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Basketball</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Course</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Art Martial</string>
+          </property>
+         </item>
         </widget>
-        <widget class="QComboBox" name="comboBox_10">
+        <widget class="QComboBox" name="comboBox_etat">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -323,8 +353,18 @@ border-color: black;
 padding:0 8;
 }</string>
          </property>
+         <item>
+          <property name="text">
+           <string>Bonne</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mauvaise</string>
+          </property>
+         </item>
         </widget>
-        <widget class="QPushButton" name="pushButton_23">
+        <widget class="QPushButton" name="pushButton_ajout">
          <property name="geometry">
           <rect>
            <x>390</x>
@@ -361,295 +401,11 @@ border: none;
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_18">
-       <attribute name="title">
-        <string>Modifier Terrain</string>
-       </attribute>
-       <widget class="QGroupBox" name="groupBox_14">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>50</y>
-          <width>561</width>
-          <height>291</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QGroupBox {
-  border: 1px solid #007299;
-  border-radius: 9px;
-  margin-top: 0.5em;
-}</string>
-        </property>
-        <property name="title">
-         <string>Formulaire de modification</string>
-        </property>
-        <widget class="QLineEdit" name="lineEdit_3">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>60</y>
-           <width>113</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit_4">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>90</y>
-           <width>113</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit_7">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>150</y>
-           <width>113</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit_8">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>180</y>
-           <width>113</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_21">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>60</y>
-           <width>51</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font:75  10pt&quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>ID</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_22">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>90</y>
-           <width>56</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Nom</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_23">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>110</y>
-           <width>81</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Type</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_24">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>150</y>
-           <width>81</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Capacité</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_57">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>180</y>
-           <width>121</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Emplacement</string>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_58">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>200</y>
-           <width>141</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Occupation</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox_11">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>120</y>
-           <width>111</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QComboBox
-{
-
- border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox_12">
-         <property name="geometry">
-          <rect>
-           <x>180</x>
-           <y>210</y>
-           <width>111</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-QComboBox
-{
-
- border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_24">
-         <property name="geometry">
-          <rect>
-           <x>370</x>
-           <y>140</y>
-           <width>131</width>
-           <height>28</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-background: #dfe3ee;
-border: 2px solid #dfe3ee;
-border-bottom-color: #aaa5a5; /* same as the pane color */
-border-top-left-radius: 7px;
-border-top-right-radius: 7px;
-min-width: 80px;
-border-radius: 8px;
-color: black;
-font-size:12px;
-font-family:Arial, Helvetica, sans-serif;
-
-
-}
-QPushButton:hover {
-color:#fff;
-background:#8b9dc3;
-border: none;
-
-}</string>
-         </property>
-         <property name="text">
-          <string>Modifier</string>
-         </property>
-        </widget>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_19">
+      <widget class="QWidget" name="tab_2">
        <attribute name="title">
         <string>Afficher Terrain</string>
        </attribute>
-       <widget class="QPushButton" name="pdfl_3">
+       <widget class="QPushButton" name="pushButton_imprim">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -685,7 +441,7 @@ border: none;
          <string>Imprimer Etat</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_tri_5">
+       <widget class="QPushButton" name="pushButton_tri">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -721,13 +477,13 @@ border: none;
          <string>Trier</string>
         </property>
        </widget>
-       <widget class="QTableView" name="tableView_livreur_4">
+       <widget class="QTableView" name="tableView_affiche">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>50</y>
-          <width>451</width>
-          <height>271</height>
+          <x>210</x>
+          <y>20</y>
+          <width>661</width>
+          <height>261</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -744,7 +500,7 @@ padding:0 5;
 </string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_tri_6">
+       <widget class="QPushButton" name="pushButton_recherche">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -780,7 +536,7 @@ border: none;
          <string>Rechercher</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_tri_7">
+       <widget class="QPushButton" name="pushButton_affecter">
         <property name="geometry">
          <rect>
           <x>60</x>
@@ -816,17 +572,47 @@ border: none;
          <string>Affecter Etat</string>
         </property>
        </widget>
-      </widget>
-      <widget class="QWidget" name="tab_20">
-       <attribute name="title">
-        <string>Supprimer Terrain</string>
-       </attribute>
-       <widget class="QPushButton" name="pushButton_S1_3">
+       <widget class="QPushButton" name="pushButton_modif">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>200</y>
-          <width>111</width>
+          <x>280</x>
+          <y>330</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+background: #dfe3ee;
+border: 2px solid #dfe3ee;
+border-bottom-color: #aaa5a5; /* same as the pane color */
+border-top-left-radius: 7px;
+border-top-right-radius: 7px;
+min-width: 80px;
+border-radius: 8px;
+color: black;
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+
+
+}
+QPushButton:hover {
+color:#fff;
+background:#8b9dc3;
+border: none;
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_supprime">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>330</y>
+          <width>131</width>
           <height>31</height>
          </rect>
         </property>
@@ -857,69 +643,236 @@ border: none;
          <string>Supprimer</string>
         </property>
        </widget>
-       <widget class="QTableView" name="tableView_livreur_5">
+       <widget class="QLineEdit" name="lineEdit_id_2">
         <property name="geometry">
          <rect>
-          <x>220</x>
-          <y>60</y>
-          <width>451</width>
-          <height>271</height>
+          <x>480</x>
+          <y>300</y>
+          <width>113</width>
+          <height>22</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">QTableView
+         <string notr="true">QLineEdit
 {
 
 border-width: 1px;
 border-style: solid;
-border-color: #007299;
+border-color: black;
   border-radius: 10px;
-padding:0 5;
-}
-
-</string>
+padding:0 8;
+}</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_tri_8">
+       <widget class="QLineEdit" name="lineEdit_id_3">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>160</y>
-          <width>111</width>
-          <height>31</height>
+          <x>80</x>
+          <y>280</y>
+          <width>113</width>
+          <height>22</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton {
-background: #dfe3ee;
-border: 2px solid #dfe3ee;
-border-bottom-color: #aaa5a5; /* same as the pane color */
-border-top-left-radius: 7px;
-border-top-right-radius: 7px;
+         <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_nom_2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>300</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_type_2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>320</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QComboBox
+{
+
+ border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Tennis</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Football</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Volleyball</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Basketball</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Course</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Art Martial</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_capacite_2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>340</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_emplacement_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>290</y>
+          <width>113</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_etat_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>320</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QComboBox
+{
+
+ border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Bonne</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Mauvaise</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>190</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background: #11cc95;
+border: 2px solid #029d70;
+border-bottom-color: #029d70; /* same as the pane color */
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
 min-width: 80px;
-border-radius: 8px;
+border-radius: 30px;
 color: black;
-font-size:12px;
+font-size:25px;
 font-family:Arial, Helvetica, sans-serif;
 
 
 }
 QPushButton:hover {
 color:#fff;
-background:#8b9dc3;
+background:#029d70;
 border: none;
 
 }
 </string>
-        </property>
-        <property name="text">
-         <string>Rechercher</string>
-        </property>
-       </widget>
-      </widget>
+      </property>
+      <property name="text">
+       <string>Terrain</string>
+      </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_16"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

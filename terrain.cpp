@@ -53,12 +53,13 @@ QSqlQueryModel *Terrain::afficher()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
-    model->setQuery("select Nom,Emplacement,Capacite,Etat,Type from terrain");
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Nom"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Emplacement"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Capacite"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Etat"));
-    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Type"));
+    model->setQuery("select * from terrain");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Emplacement"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Capacite"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Etat"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Type"));
 
     return model;
 }
@@ -88,4 +89,30 @@ bool Terrain::modifier(int id,int capacite,QString etat, QString nom,QString typ
     return    query.exec();
 }
 
+QSqlQueryModel * Terrain::tri_t()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("SELECT * FROM terrain ORDER BY capacite");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Id"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Nom"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("Emplacement"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("Capacite"));
+    model->setHeaderData(4, Qt::Horizontal, QObject::tr("Etat"));
+    model->setHeaderData(5, Qt::Horizontal, QObject::tr("Type"));
 
+
+    return model;
+}
+
+QStringList Terrain::recherche_t(){
+    QSqlQuery query;
+    query.prepare("select ID from TERRAIN");
+    query.exec();
+    QStringList list;
+    while(query.next()){
+        list.append(query.value(0).toString());
+    }
+
+    return list;
+
+}

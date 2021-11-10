@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QDebug>
 #include <QMessageBox>
+
 namespace Ui {
 class MainWindow;
 }
@@ -29,9 +30,12 @@ private slots:
 
     void on_pushButton_modif_clicked();
 
+    void on_pushButton_tri_clicked();
+
 private:
     Ui::MainWindow *ui;
     Terrain T;
+
 };
 
 #endif // MAINWINDOW_H

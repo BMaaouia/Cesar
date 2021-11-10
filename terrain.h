@@ -37,7 +37,8 @@ public:
     QSqlQueryModel * afficher();
     bool supprimer(int);
     bool modifier(int id,int capacite,QString etat, QString nom,QString type, QString emplacement);
-
+    QSqlQueryModel * tri_t();
+    QStringList recherche_t();
 
 
 };

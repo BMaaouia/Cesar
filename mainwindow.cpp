@@ -2,6 +2,9 @@
 #include "ui_mainwindow.h"
 #include "terrain.h"
 #include <QMessageBox>
+#include <QItemSelectionModel>
+
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -9,7 +12,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableView_affiche->setModel(T.afficher());
-
+    ui->lineEdit_id->setValidator(new QRegExpValidator(QRegExp("[0-9]{0,8}"),NULL));
+    ui->lineEdit_capacite->setValidator(new QRegExpValidator(QRegExp("[0-9]{0,6}"),NULL));
+    ui->lineEdit_nom->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"),NULL));
+    ui->lineEdit_emplacement->setValidator(new QRegExpValidator(QRegExp("[A-Za-z]{0,10}"),NULL));
 }
 
 MainWindow::~MainWindow()
@@ -51,6 +57,8 @@ void MainWindow::on_pushButton_ajout_clicked()
 void MainWindow::on_tabWidget_currentChanged(int index)
 {
     ui->tableView_affiche->setModel(T.afficher());
+    ui->comboBox_3->clear();
+    ui->comboBox_3->addItems(T.recherche_t());
 
 }
 
@@ -65,8 +73,9 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_supprime_clicked()
 {
     Terrain T1;
-    T1.set_id(ui->lineEdit_id_2->text().toInt());
+    T1.set_id(ui->tableView_affiche->selectionModel()->currentIndex().data().toInt());
     bool test=T1.supprimer(T1.get_id());
+
 
     QMessageBox msgBox;
 
@@ -83,15 +92,18 @@ ui->tableView_affiche->setModel(T.afficher());
 
 void MainWindow::on_pushButton_modif_clicked()
 {
-    int id=ui->lineEdit_id_3->text().toInt();
-    QString nom=ui->lineEdit_nom_2->text();
-    QString emplacement=ui->lineEdit_emplacement_2->text();
-    QString type=ui->comboBox_type_2->currentText();
-    int capacite=ui->lineEdit_capacite_2->text().toInt();
-    QString etat=ui->comboBox_etat_2->currentText();
     Terrain T1;
+    ui->comboBox_3->clear();
+    ui->comboBox_3->addItems(T1.recherche_t());
+    int id=ui->comboBox_3->currentText().toInt();
+    QString nom=ui->lineEdit_nom->text();
+    QString emplacement=ui->lineEdit_emplacement->text();
+    QString type=ui->comboBox_type->currentText();
+    int capacite=ui->lineEdit_capacite->text().toInt();
+    QString etat=ui->comboBox_etat->currentText();
 
     bool test=T1.modifier(id,capacite,etat,nom,type, emplacement);
+
 
     if(test)
     {
@@ -104,5 +116,13 @@ void MainWindow::on_pushButton_modif_clicked()
                     QObject::tr("Erreur !.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
-    ui->tableView_affiche->setModel(T1.afficher());
+
+
+    ui->tableView_affiche->setModel(T.afficher());
+}
+
+void MainWindow::on_pushButton_tri_clicked()
+{
+    ui->tableView_affiche->setModel(T.tri_t());
+
 }

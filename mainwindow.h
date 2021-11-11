@@ -32,6 +32,8 @@ private slots:
 
     void on_pushButton_tri_clicked();
 
+    void on_pushButton_imprim_clicked();
+
 private:
     Ui::MainWindow *ui;
     Terrain T;

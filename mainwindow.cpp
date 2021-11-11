@@ -5,7 +5,6 @@
 #include <QItemSelectionModel>
 
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -126,3 +125,4 @@ void MainWindow::on_pushButton_tri_clicked()
     ui->tableView_affiche->setModel(T.tri_t());
 
 }
+

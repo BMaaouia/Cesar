@@ -24,8 +24,8 @@
        <widget class="QTabWidget" name="tabWidget">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>10</y>
+          <x>50</x>
+          <y>40</y>
           <width>931</width>
           <height>411</height>
          </rect>
@@ -69,7 +69,7 @@ margin-top: 2px; /* make non-selected tabs look smaller */
 }</string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_1">
          <attribute name="title">
@@ -177,31 +177,6 @@ border: none;
             </rect>
            </property>
            <layout class="QGridLayout" name="gridLayout_2">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_id">
-              <property name="styleSheet">
-               <string notr="true">font:75  10pt&quot;Segoe UI&quot;;</string>
-              </property>
-              <property name="text">
-               <string>ID</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="lineEdit_id">
-              <property name="styleSheet">
-               <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-              </property>
-             </widget>
-            </item>
             <item row="1" column="0">
              <widget class="QLabel" name="label_nom">
               <property name="styleSheet">
@@ -212,8 +187,34 @@ padding:0 8;
               </property>
              </widget>
             </item>
-            <item row="1" column="1" rowspan="2">
-             <widget class="QLineEdit" name="lineEdit_nom">
+            <item row="8" column="1">
+             <widget class="QComboBox" name="comboBox_etat">
+              <property name="styleSheet">
+               <string notr="true">
+QComboBox
+{
+
+ border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>Bonne</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Mauvaise</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="lineEdit_id">
               <property name="styleSheet">
                <string notr="true">QLineEdit
 {
@@ -234,6 +235,81 @@ padding:0 8;
               </property>
               <property name="text">
                <string>Type</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_id">
+              <property name="styleSheet">
+               <string notr="true">font:75  10pt&quot;Segoe UI&quot;;</string>
+              </property>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="lineEdit_capacite">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1" rowspan="3">
+             <widget class="QLineEdit" name="lineEdit_emplacement">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1" rowspan="2">
+             <widget class="QLineEdit" name="lineEdit_nom">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit
+{
+
+border-width: 1px;
+border-style: solid;
+border-color: black;
+  border-radius: 10px;
+padding:0 8;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_capacite">
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
+              </property>
+              <property name="text">
+               <string>Capacité</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0" rowspan="2">
+             <widget class="QLabel" name="label_etat">
+              <property name="styleSheet">
+               <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
+              </property>
+              <property name="text">
+               <string>Etat</string>
               </property>
              </widget>
             </item>
@@ -283,32 +359,7 @@ padding:0 8;
               </item>
              </widget>
             </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="label_capacite">
-              <property name="styleSheet">
-               <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-              </property>
-              <property name="text">
-               <string>Capacité</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
-             <widget class="QLineEdit" name="lineEdit_capacite">
-              <property name="styleSheet">
-               <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="0">
+            <item row="6" column="0">
              <widget class="QLabel" name="label_emplacement">
               <property name="styleSheet">
                <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
@@ -316,57 +367,6 @@ padding:0 8;
               <property name="text">
                <string>Emplacement</string>
               </property>
-             </widget>
-            </item>
-            <item row="5" column="1" rowspan="2">
-             <widget class="QLineEdit" name="lineEdit_emplacement">
-              <property name="styleSheet">
-               <string notr="true">QLineEdit
-{
-
-border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-              </property>
-             </widget>
-            </item>
-            <item row="6" column="0" rowspan="2">
-             <widget class="QLabel" name="label_etat">
-              <property name="styleSheet">
-               <string notr="true">font: 75 12pt &quot;Segoe UI&quot;;</string>
-              </property>
-              <property name="text">
-               <string>Etat</string>
-              </property>
-             </widget>
-            </item>
-            <item row="7" column="1">
-             <widget class="QComboBox" name="comboBox_etat">
-              <property name="styleSheet">
-               <string notr="true">
-QComboBox
-{
-
- border-width: 1px;
-border-style: solid;
-border-color: black;
-  border-radius: 10px;
-padding:0 8;
-}</string>
-              </property>
-              <item>
-               <property name="text">
-                <string>Bonne</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mauvaise</string>
-               </property>
-              </item>
              </widget>
             </item>
            </layout>
@@ -381,7 +381,7 @@ padding:0 8;
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>240</y>
+            <y>230</y>
             <width>111</width>
             <height>31</height>
            </rect>
@@ -417,7 +417,7 @@ border: none;
           <property name="geometry">
            <rect>
             <x>10</x>
-            <y>200</y>
+            <y>170</y>
             <width>111</width>
             <height>31</height>
            </rect>
@@ -475,8 +475,8 @@ padding:0 5;
          <widget class="QPushButton" name="pushButton_recherche">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>160</y>
+            <x>400</x>
+            <y>300</y>
             <width>111</width>
             <height>31</height>
            </rect>
@@ -547,7 +547,7 @@ border: none;
          <widget class="QPushButton" name="pushButton_supprime">
           <property name="geometry">
            <rect>
-            <x>460</x>
+            <x>770</x>
             <y>290</y>
             <width>131</width>
             <height>31</height>
@@ -584,7 +584,7 @@ border: none;
           <property name="geometry">
            <rect>
             <x>240</x>
-            <y>300</y>
+            <y>310</y>
             <width>151</width>
             <height>22</height>
            </rect>

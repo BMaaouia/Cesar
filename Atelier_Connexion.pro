@@ -5,7 +5,9 @@
 #-------------------------------------------------
 
 QT       += core gui sql
-
+QT       += core gui network
+QT       += core gui printsupport
+QT += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Atelier_Connexion
@@ -24,16 +26,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG += c++11
 
+
+
+
+
 SOURCES += \
     Spectateur.cpp \
         main.cpp \
         mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    notif.cpp \
+    smtp.cpp
 
 HEADERS += \
     Spectateur.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    notif.h \
+    smtp.h
 
 FORMS += \
         mainwindow.ui
@@ -42,3 +52,12 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    image/Qt image 3.jpg \
+    image/Qt image 3.jpg \
+    image/Qt image 3.jpg \
+    image/Qt image 3.jpg \
+    image/Qt image 3.jpg \
+    image/Qt image 3.jpg \
+    image/Qt image 3.jpg

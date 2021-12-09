@@ -1,9 +1,19 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "terrain.h"
+#include "Spectateur.h"
+#include"smtp.h"
+#include "notif.h"
+
 #include <QMainWindow>
-#include <QDebug>
-#include <QMessageBox>
+#include <QNetworkAccessManager>
+#include <QUrlQuery>
+#include <QtNetwork/QAbstractSocket>
+#include <QtNetwork/QSslSocket>
+#include <QNetworkReply>
+#include <QNetworkRequest>
+#include<QJsonDocument>
+#include<QJsonObject>
+#include<QJsonArray>
 
 namespace Ui {
 class MainWindow;
@@ -18,26 +28,39 @@ public:
     ~MainWindow();
 
 private slots:
+    void on_pb_ajouter_clicked();
 
-
-    void on_pushButton_ajout_clicked();
+    void on_pb_supprimer_clicked();
 
     void on_tabWidget_currentChanged(int index);
 
-    void on_pushButton_clicked();
+    void on_modif_clicked();
 
-    void on_pushButton_supprime_clicked();
+    void on_recherche_spectateur_textChanged(const QString &arg1);
 
-    void on_pushButton_modif_clicked();
+    void on_check_id_tri_clicked();
 
-    void on_pushButton_tri_clicked();
+    void on_check_date_tri_clicked();
 
-    void on_pushButton_imprim_clicked();
+    void on_check_nom_tri_clicked();
+
+     void on_imprimer_Spectateur_clicked();
+
+     void on_send_mail_clicked();
+
+     void mailSent(QString);
+
+
+
+
+     void on_envoyersms_clicked();
+
+      void replyFinished(QNetworkReply* reply);
 
 private:
     Ui::MainWindow *ui;
-    Terrain T;
-
+    Spectateur E;
+      QRegExp le_email_regex ;
 };
 
 #endif // MAINWINDOW_H
